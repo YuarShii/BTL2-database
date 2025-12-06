@@ -89,3 +89,16 @@ BEGIN
 END//
 
 DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER trg_TruocKhiXoaSanPham_TruTienGio
+BEFORE DELETE ON SANPHAM
+FOR EACH ROW
+BEGIN
+    -- Cập nhật trừ tiền trực tiếp cho các giỏ hàng đang chứa sản phẩm sắp bị xóa
+    UPDATE GIOHANG gh
+    JOIN CHI_TIET_GIOHANG ct ON gh.MaGioHang = ct.MaGioHang
+    SET gh.tongTienGioHang = gh.tongTienGioHang - (ct.soLuongGio * OLD.GiaBan)
+    WHERE ct.MaSanPham = OLD.MaSanPham;
+END//
+DELIMITER ;
