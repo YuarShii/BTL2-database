@@ -1,3 +1,4 @@
+USE testdbbk;
 -- 1. TEST CASE 1: HỦY ĐƠN HỢP LỆ (Thành công)
 -- Tạo đơn hàng mới đặt cách đây 1 giờ (trong khoảng 2h cho phép)
 INSERT INTO DONHANG (maDonHang, tongTien, trangThaiDonHang, maNguoiDung, phuongThucThanhToan, ngayDatHang) 

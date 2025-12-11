@@ -90,9 +90,9 @@ INSERT INTO CHI_TIET_DONHANG (maDonHang, maSanPham, soLuongMua, giaLucMua) VALUE
 -- 11. Insert sample data into KHUYENMAI
 INSERT INTO KHUYENMAI (moTa, soTienGiam, giaTriDonHangToiThieu, soLanSuDungToiDa, tinhTrang, hanSuDung, maCuaHang) VALUES
 ('Giảm 10% cho đơn đầu', 1000000.00, 5000000.00, 10, 'active', '2025-12-31', NULL),
-('Khuyến mãi shop Chủ', 500000.00, 2000000.00, 5, 'active', '2025-12-15', 1),
-('Flash sale thời trang', 200000.00, 1000000.00, 20, 'active', '2025-12-10', 2),
-('Giảm giá điện tử', 300000.00, 3000000.00, 8, 'inactive', '2025-12-05', 3),
+('Khuyến mãi shop Chủ', 500000.00, 2000000.00, 5, 'active', '2025-12-31', 1),
+('Flash sale thời trang', 200000.00, 1000000.00, 20, 'active', '2025-12-31', 2),
+('Giảm giá điện tử', 300000.00, 3000000.00, 8, 'inactive', '2025-12-31', 3),
 ('Mã shipper đặc biệt', 100000.00, 0.00, 50, 'active', '2025-12-31', NULL);
 
 -- 12. Insert sample data into AP_DUNG_KHUYENMAI
