@@ -1,3 +1,4 @@
+-- Active: 1765006864162@@127.0.0.1@3306@mysql
 -- Tạo cơ sở dữ liệu
 CREATE DATABASE IF NOT EXISTS testdbbk;
 USE testdbbk;
@@ -132,7 +133,7 @@ CREATE TABLE CHI_TIET_DONHANG (
     soLuongMua INT NOT NULL CHECK (soLuongMua > 0), -- Ràng buộc 2 sẽ dùng trigger
     giaLucMua DECIMAL(15,2) NOT NULL CHECK (giaLucMua >= 0),
     PRIMARY KEY (maDonHang, maSanPham),
-    FOREIGN KEY (maDonHang) REFERENCES DONHANG(maDonHang) ON DELETE CASCADE,
+    FOREIGN KEY (maDonHang) REFERENCES DONHANG(maDonHang),
     FOREIGN KEY (maSanPham) REFERENCES SANPHAM(maSanPham)
 );
 
